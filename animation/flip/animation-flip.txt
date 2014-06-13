@@ -1,0 +1,8 @@
+perspective属性的存在与否决定了你所看到的是2次元的还是3次元的，也就是是2D transform还是3D transform. 这不难理解，没有透视，不成3D.
+
+perspective属性可以设置在被形变图形的父元素上(perspective:200px;)。(或者直接设置在形变元素上。-webkit-transform:-webkit-perspective(600px);rotateY(60deg))
+
+perspective-origin这个属性代表视点位置。默认就是所看元素的中心
+
+基本上，我们想要根据现实经验实现一些3D效果的时候，transform-style: preserve-3d是少不了的。一般而言，该声明应用在3D变换的兄弟元素们的父元素上
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Flip Demo</title>
+  <style type="text/css">
+    .center{
+      margin: auto;
+      margin-top: 100px;
+    }
+    .animation_container{
+      -webkit-perspective:800px;
+      -moz-perspective:800px;
+      -o-perspective:800px;
+      perspective:800px;
+      border: 1px solid red;
+      width: 375px;
+      height: 450px;
+    }
+    .front{
+      /*当元素背向屏幕时是否可见。顺X(Y)轴旋转180°则此时元素背向屏幕。*/
+      -webkit-backface-visibility:hidden;
+      -moz-backface-visibility:hidden;
+      -o-backface-visibility:hidden;
+      backface-visibility:hidden;
+
+      -webkit-transform:rotateY(0deg);
+      -moz-transform:rotateY(0deg);
+      -o-transform:rotateY(0deg);
+      transform:rotateY(0deg);
+
+      -webkit-transform-style:preserve-3d;
+      -moz-transform-style:preserve-3d;
+      -o-transform-style:preserve-3d;
+      transform-style:preserve-3d;
+      /*渐变*/
+      transition:all .6s ease-in-out;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .back{
+      -webkit-transform:rotateY(180deg);
+      -webkit-backface-visibility:hidden;
+      transition:all .6s ease-in-out;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .fliper{
+      -webkit-transition:all .6s ease-in-out;
+      transition:all .6s ease-in-out;
+      -webkit-transform:rotateY(0deg);
+      height:450px;
+    }
+    .fliper:hover,.fliper:hover .front{
+       -webkit-transform:rotateY(180deg);
+     }
+    .fliper:hover .back{
+      -webkit-transform:rotateY(0deg);
+    }
+
+  </style>
+</head>
+<body>
+<div class="center animation_container">
+  <div class="fliper">
+  <div class="front">
+    <img width="375" height="450" src="../../img/1.jpg">
+  </div>
+  <div class="back">
+    <img width="375" height="450" src="../../img/2.jpg">
+  </div>
+  </div>
+</div>
+</body>
+</html>
