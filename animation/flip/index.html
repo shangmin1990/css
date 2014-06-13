@@ -42,8 +42,15 @@
     }
     .back{
       -webkit-transform:rotateY(180deg);
+      -moz-transform:rotateY(180deg);
+      -o-transform:rotateY(180deg);
+      transform:rotateY(180deg);
       -webkit-backface-visibility:hidden;
+      -moz-backface-visibility:hidden;
+      backface-visibility:hidden;
       transition:all .6s ease-in-out;
+      -webkit-transition:all .6s ease-in-out;
+      -moz-transition:all .6s ease-in-out;
       position: absolute;
       left: 0;
       top: 0;
@@ -51,14 +58,21 @@
     .fliper{
       -webkit-transition:all .6s ease-in-out;
       transition:all .6s ease-in-out;
+      -moz-transition:all .6s ease-in-out;
       -webkit-transform:rotateY(0deg);
+      -moz-transform:rotateY(0deg);
+      transform:rotateY(0deg);
       height:450px;
     }
     .fliper:hover,.fliper:hover .front{
        -webkit-transform:rotateY(180deg);
+      -moz-transform:rotateY(180deg);
+      transform:rotateY(180deg);
      }
     .fliper:hover .back{
       -webkit-transform:rotateY(0deg);
+      -moz-transform:rotateY(0deg);
+      transform:rotateY(0deg);
     }
 
   </style>
